@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Hotel Ibadan | Website concept</title>
+<meta name="description" content="Concept website for a hotel in Ibadan: rooms, facilities, gallery and enquiries by WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="#top" id="brandName">Demo Hotel</a>
+  <button class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+    <a href="#rooms">Rooms</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch between light and dark mode">Light / Dark</button>
+    <a class="btn small" href="#enquire">Make an enquiry</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-text">
+    <h1>A calm place to stay in Ibadan</h1>
+    <p>Comfortable rooms, a restaurant and bar, and space for events. Tell us your dates and we reply on WhatsApp.</p>
+    <a class="btn" href="#rooms">See the rooms</a>
+  </div>
+  <form class="panel" id="enquire" novalidate>
+    <h2>Check availability</h2>
+    <p class="note">This sends an enquiry. Your room is not reserved until the hotel confirms.</p>
+    <div class="row">
+      <label>Check-in<input type="date" id="checkin" required></label>
+      <label>Check-out<input type="date" id="checkout" required></label>
+    </div>
+    <div class="row">
+      <label>Guests<input type="number" id="guests" min="1" max="10" value="2" required></label>
+      <label>Room type
+        <select id="roomType">
+          <option>Standard</option>
+          <option>Executive</option>
+          <option>Suite</option>
+        </select>
+      </label>
+    </div>
+    <label>Your name<input type="text" id="name" autocomplete="name" required></label>
+    <button class="btn" type="submit">Send enquiry on WhatsApp</button>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section class="sec" id="rooms">
+  <h2>Rooms</h2>
+  <p class="lead">Sample room categories. Replace with the hotel's real rooms, photos and approved prices.</p>
+  <div class="cards">
+    <article class="room"><div class="ph" role="img" aria-label="Photo placeholder">Room photo here</div><h3>Standard</h3><p>Air-conditioned room with en-suite bathroom and a work desk. Sleeps 2.</p><p class="price">Price: to be confirmed</p><a class="btn small ghost" href="#enquire" data-room="Standard">Enquire</a></article>
+    <article class="room"><div class="ph" role="img" aria-label="Photo placeholder">Room photo here</div><h3>Executive</h3><p>A larger room with a sitting area and flat-screen TV. Sleeps 2.</p><p class="price">Price: to be confirmed</p><a class="btn small ghost" href="#enquire" data-room="Executive">Enquire</a></article>
+    <article class="room"><div class="ph" role="img" aria-label="Photo placeholder">Room photo here</div><h3>Suite</h3><p>Separate living area and bedroom for longer stays. Sleeps 3.</p><p class="price">Price: to be confirmed</p><a class="btn small ghost" href="#enquire" data-room="Suite">Enquire</a></article>
+  </div>
+</section>
+
+<section class="sec alt" id="facilities">
+  <h2>Facilities</h2>
+  <p class="lead">Sample list. Only show what the hotel confirms it offers.</p>
+  <ul class="facts">
+    <li><strong>Restaurant and bar</strong><span>Local and continental meals. Opening hours to be confirmed.</span></li>
+    <li><strong>Event hall</strong><span>For meetings, weddings and parties. Capacity to be confirmed.</span></li>
+    <li><strong>Wi-Fi and parking</strong><span>Details to be confirmed.</span></li>
+    <li><strong>Check-in and check-out</strong><span>Times, payment methods and cancellation policy to be confirmed.</span></li>
+  </ul>
+</section>
+
+<section class="sec" id="gallery">
+  <h2>Gallery</h2>
+  <p class="lead">Click a photo to enlarge it. Placeholders for now.</p>
+  <div class="grid">
+    <button class="ph g" data-label="Reception">Reception</button>
+    <button class="ph g" data-label="Restaurant">Restaurant</button>
+    <button class="ph g" data-label="Event hall">Event hall</button>
+    <button class="ph g" data-label="Pool or garden">Pool or garden</button>
+    <button class="ph g" data-label="Bar">Bar</button>
+    <button class="ph g" data-label="Exterior">Exterior</button>
+  </div>
+</section>
+
+<section class="sec alt" id="contact">
+  <h2>Find us</h2>
+  <p class="lead">Placeholders: add the hotel's verified details.</p>
+  <ul class="facts">
+    <li><strong>Address</strong><span>[Hotel address], Ibadan, Oyo State</span></li>
+    <li><strong>Phone</strong><span>[Verified phone number]</span></li>
+    <li><strong>WhatsApp</strong><span>[Verified WhatsApp number]</span></li>
+    <li><strong>Email</strong><span>[Verified email]</span></li>
+  </ul>
+</section>
+</main>
+
+<footer>
+  <p>&copy; Concept demo by Olamide. This is a design sample, not the official website of any hotel.</p>
+</footer>
+
+<dialog id="lightbox"><p id="lbText"></p><button class="btn small" id="lbClose">Close</button></dialog>
+<script src="script.js"></script>
+</body>
+</html>
